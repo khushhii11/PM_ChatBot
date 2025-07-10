@@ -1,60 +1,112 @@
-# Word Document to JSON Extractor
+# PMAccelerator RAGPM
 
-This script extracts text from a Word document (`PMData.docx`) and converts it into JSON blocks with the following structure:
-- `id`: Unique identifier for each text block
-- `content`: The extracted text content
-- `links_keywords`: Array of URLs and important keywords found in the text
-
-## Step-by-Step Instructions
-
-### Step 1: Install Dependencies
-First, install the required Python package:
-```bash
-pip install -r requirements.txt
-```
-
-### Step 2: Run the Extraction Script
-Execute the Python script to extract content from your Word document:
-```bash
-python extract_docx_to_json.py
-```
-
-### Step 3: Check the Results
-The script will:
-1. Process the `PMData.docx` file
-2. Create an `extracted_content.json` file with the results
-3. Display a preview of the first few extracted blocks in the console
-
-## Output Format
-
-Each JSON block will have this structure:
-```json
-{
-  "id": 1,
-  "content": "Your extracted text content here...",
-  "links_keywords": ["URL1", "URL2", "Keyword1", "Keyword2"]
-}
-```
+## Overview
+This project provides a Retrieval-Augmented Generation (RAG) pipeline for answering questions based on a knowledge base extracted from a Word document. It uses embeddings for semantic search and integrates with the DeepSeek R1 model via OpenRouter for answer generation and summarization. A FastAPI backend exposes endpoints for frontend integration and feedback collection.
 
 ## Features
+- Extract Q&A blocks from a Word document
+- Generate and store vector embeddings for semantic search
+- Retrieve top relevant blocks for a user query
+- Summarize and answer queries using DeepSeek R1 (OpenRouter API)
+- FastAPI backend with endpoints for querying and feedback
+- Feedback is saved for further analysis
+- Environment variables managed securely via `.env`
 
-- **Automatic URL Detection**: Finds and extracts any URLs in the text
-- **Keyword Extraction**: Identifies potential keywords (capitalized words, technical terms)
-- **Unique IDs**: Each text block gets a sequential unique identifier
-- **UTF-8 Support**: Handles special characters and international text
-- **Error Handling**: Gracefully handles document processing errors
+## Setup
 
-## Customization
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+pip install fastapi uvicorn python-dotenv requests sentence-transformers
+```
 
-You can modify the `extract_links_and_keywords()` function in the script to:
-- Adjust keyword detection rules
-- Add more sophisticated keyword extraction logic
-- Customize the filtering of common words
-- Add domain-specific keyword patterns
+### 2. Prepare Data
+- Place your Word document (`PMData.docx`) in the project root.
+- Run the extraction and embedding scripts:
+  ```bash
+  python extract_docx_to_json.py
+  python create_embeddings.py
+  ```
 
-## Troubleshooting
+### 3. Set Up API Key
+- Create a `.env` file in the project root:
+  ```
+  OPENROUTER_API_KEY=your_openrouter_key_here
+  ```
+- Ensure `.env` is in `.gitignore` (already set).
 
-If you encounter any issues:
-1. Make sure `PMData.docx` is in the same directory as the script
-2. Verify that the document is not corrupted or password-protected
-3. Check that you have write permissions in the current directory 
+### 4. Run the FastAPI Server
+```bash
+uvicorn fastapi_app:app --reload
+```
+- The API will be available at `http://localhost:8000`
+- Interactive docs: `http://localhost:8000/docs`
+
+## API Endpoints
+
+### POST `/query`
+- **Description:** Submit a user query and get an answer.
+- **Request Body:**
+  ```json
+  {
+    "query": "What is the start date of the internship?"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "answer": "The earliest start date is next week, depending on the completion of the assessment. ..."
+  }
+  ```
+
+### POST `/feedback`
+- **Description:** Submit feedback for a given question and answer.
+- **Request Body:**
+  ```json
+  {
+    "question": "What is the start date of the internship?",
+    "answer": "The earliest start date is next week, depending on the completion of the assessment. ...",
+    "feedback": "yes" // or "no"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "status": "success",
+    "message": "Feedback saved."
+  }
+  ```
+
+## Frontend Integration
+- The frontend can POST to `/query` to get answers and to `/feedback` to submit user feedback.
+- See the interactive docs at `/docs` for testing and schema.
+
+## Security
+- **API keys** are stored in `.env` and never committed to version control.
+- **Feedback** is saved in `feedback.jsonl` for later analysis.
+
+## Example JavaScript Fetch
+```js
+// Query endpoint
+fetch('http://localhost:8000/query', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ query: 'What is the start date of the internship?' })
+})
+  .then(res => res.json())
+  .then(data => console.log(data.answer));
+
+// Feedback endpoint
+fetch('http://localhost:8000/feedback', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    question: 'What is the start date of the internship?',
+    answer: 'The earliest start date is next week, depending on the completion of the assessment. ...',
+    feedback: 'yes'
+  })
+});
+```
+
+## License
+MIT 
