@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "question": "Q: What is the start date of the internship?",
+    "answer": "A: The earliest start date is next week, depending on the completion of the assessment. The internship runs for 3 months per year. The current cohort is from Jun 23 to September 5th. Please refer to your offer letter for the exact date.",
+    "links": []
+  },
+  {
+    "id": 2,
+    "question": "Q: Is the internship paid or unpaid?",
+    "answer": "A: The internship is unpaid, but it offers valuable experience and the opportunity to work on real AI projects.",
+    "links": []
+  },
+  {
+    "id": 3,
+    "question": "Q: What is the expected time commitment?",
+    "answer": "A: A minimum of 10 hours per week is required. Participants can take on more work if they have the time, which can lead to bigger projects and better resume outcomes.",
+    "links": []
+  },
+  {
+    "id": 4,
+    "question": "Q: Can we use any programming language or technology stack for the project?",
+    "answer": "A: There is no preference for a specific technology stack. However, most AI work typically uses Python.",
+    "links": []
+  },
+  {
+    "id": 5,
+    "question": "Q: What happens if the code is submitted privately on GitHub?",
+    "answer": "A: If the code is private, it may not be adequately evaluated by the assessment tool. Public repositories are preferred for proper evaluation.",
+    "links": []
+  },
+  {
+    "id": 6,
+    "question": "Q: Can I use APIs for the AI project?",
+    "answer": "A: Yes, you are encouraged to use APIs and any other necessary tools to complete your project.",
+    "links": []
+  },
+  {
+    "id": 7,
+    "question": "Q: What type of projects are being developed?",
+    "answer": "A: Examples include AI-powered home renovation, inventory forecasting, price prediction, mental health consultation, and productivity tools. The projects vary depending on the cohort and team needs. Please watch the for project inspiration.",
+    "links": []
+  },
+  {
+    "id": 8,
+    "question": "Q: Is there a preference for the weather app’s lines of code?",
+    "answer": "A: For public submissions, focus on building the app without worrying about the number of lines of code. For private submissions, ensure there are enough lines of code to be evaluated properly.",
+    "links": []
+  },
+  {
+    "id": 9,
+    "question": "Q: What is the evaluation process for the technical assessment?",
+    "answer": "A: Our tech recruiter will review your tech assessment one by one.",
+    "links": []
+  },
+  {
+    "id": 10,
+    "question": "Q: Will there be any technical courses provided?",
+    "answer": "A: Recommended courses will be provided, and most of them are free. You can check out our . The most expensive ones are around $50. If you already have all the required skills, you don't need to take additional courses. However, if you don't have the necessary AI skills, you will need to pay for your own AI courses. Most of these courses are offered by Deeplearning.ai.",
+    "links": []
+  },
+  {
+    "id": 11,
+    "question": "Q: Will I have access to the Discord channel before being selected?",
+    "answer": "A: No, only selected participants will gain access to the Discord channel.",
+    "links": []
+  },
+  {
+    "id": 12,
+    "question": "Q: Can I join the internship in the next cohort?",
+    "answer": "A: Yes. Make sure to communicate with our team. We will see if you can fit into the next cohort.",
+    "links": []
+  },
+  {
+    "id": 13,
+    "question": "Q: What happens if I don’t meet the coding skill requirements?",
+    "answer": "A: You will not be selected for the internship if your coding skills do not meet the required standards.",
+    "links": []
+  },
+  {
+    "id": 14,
+    "question": "Q: How will the internship experience be recognized on LinkedIn?",
+    "answer": "A: You can list the internship experience on LinkedIn after successfully completing the project.",
+    "links": []
+  },
+  {
+    "id": 15,
+    "question": "Q: What is the team size for the projects?",
+    "answer": "A: Teams typically consist of 8 to 10 people, including product managers and engineers, depending on the scope of the project.",
+    "links": []
+  },
+  {
+    "id": 16,
+    "question": "Q: What happens after the internship in terms of job opportunities?",
+    "answer": "A: The company will share your project work through social channels and pass job descriptions to the Discord channel. This may lead to job opportunities through referrals. The top performers receiving our awards will get additional benefit such as job referrals and 1:1 resume review. Please student the Award sessions for details. —------------------------------------------------------------------------------------------------------------------ Additional Intern Questions: What happens in situations when my OPT/CPT dates are 1-month into the program and ends before the next cohort? Example: I’m interested in joining Cohort 5: Cohort #5 = Jun-23-2025  - Sep-12-2025 Cohort #6 = Sept-15-2025  - Nov-28-2025 But my OPT/CPT will only allow me to have Start Date = June 23rd and End Date = August 8th. Reason: The university has informed me that they cannot approve the current dates listed in the offer letter, as the internship must conclude before the start of the Fall 2025 semester. According to their guidelines, the final allowable date for the internship is August 8, 2025.. Can I still join a cohort, but not tell my university?  - Can I get in trouble for this situation? Answer: If your CPT/OPT date is within 1 week or so around our cohort date. It’s fine. If it cuts off in the middle of the cohort. We have to move you to the future cohort. Who will pay for services that require pay during the internship? Example - API services or Cloud services for the AI product? Example - Need compute for FineTuning a model? Answer: Our company or the product managers in the same team will cover the cloud and API cost. But we will not cover the computer device cost. I will be traveling to visit my family from the USA to India, China, etc…. Can I use this OPT/CPT work permit for reentry into the USA? Answer: We don’t know, please contact your immigration lawyer. Standard response for CPT/OPT process in the program: For interns' CPT and OPT sponsorship concerns, please follow the steps below: **1. Consult Your School First** Please speak with your school’s international student office to understand their specific requirements for CPT or OPT authorization. They will inform you what documentation or updates are needed from our side (e.g., offer letter, company info, etc.). **2. Offer Letter Timing** We are able to revise your offer letter based on your CPT/OPT dates. However, we ask that your start and end dates align as closely as possible with your assigned cohort timeline. A 1–2 week delay is acceptable if there are processing delays, but please keep us informed and send us any updated dates as soon as possible. **3. E-Verify Requirements** We will also need your information to validate your eligibility to work in the U.S. through the E-Verify system. Please follow the steps here: https://discord.com/channels/1255183088607297729/1283485753782964316/1293422029298471007 Please make sure to send/share your full legal name in your offer letter. - If you have any questions, don't hesitate to ask in #visa-sponsorship channel or reach out directly to our support team : Marla. Do Interns have AI PM Bootcamp Kajabi access? - No. Only PMs enrolled in the program have access to our course modules (Kajabi). Interns will have access to their own recorded training/session/files with the link/s that the PMA team will share. Example: - Recent AI Intern recorded training/ onboarding with Mentors Aishwarya Saad Shariff & Anil Thomas: - Intern Onboarding, training, AI course and guide document:",
+    "links": [
+      "https://discord.com/channels/1255183088607297729/1283485753782964316/1293422029298471007"
+    ]
+  }
+]
